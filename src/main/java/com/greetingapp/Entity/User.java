@@ -1,6 +1,6 @@
 package com.greetingapp.Entity;
 
-//user class
+//user class / model class / pogo class
 public class User {
     //user attribute
     private long id;
@@ -11,6 +11,7 @@ public class User {
         this.message = message;
     }
 
+    //getters & Setter to use user fields
     public long getId() {
         return id;
     }
