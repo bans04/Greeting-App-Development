@@ -1,7 +1,9 @@
 package com.greetingapp.controller;
+import com.greetingapp.Entity.NewUser;
 import com.greetingapp.Entity.User;
 import com.greetingapp.service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,5 +29,10 @@ public class GreetingController {
     @RequestMapping("/getMessage")
     public User sayHello(){
         return greetingService.getMessage();
+    }
+
+    @PostMapping("/greetingMessage")
+    public User sayHello(NewUser newUser){
+        return  greetingService.greetingMessage(newUser);
     }
 }
